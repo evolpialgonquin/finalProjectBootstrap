@@ -1,5 +1,37 @@
-.navbar {
-  background-color: cornflowerblue;
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  background-image: url("../img/wallpaperaccess_header.jpg");
+  background-size: 100%;
+  background-position: center;
+  min-height: 40vh;
+  position: relative;
+  align-items: center;
+}
+
+#headerContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#avatar img {
+  border-radius: 50%;
+  height: 20vh;
+  width: auto;
+  top: 50%;
+  margin: 10%;
+}
+
+#title {
+  color: #9c8544;
+  text-shadow: 1px 1px 1px whitesmoke;
+  margin: 10%;
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=main.css.map */
