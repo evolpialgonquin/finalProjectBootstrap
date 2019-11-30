@@ -1,9 +1,36 @@
-.navbar {
-}
+$lPrimary: hsl(237, 41%, 95%);
+$lPrimaryOpac: hsla(237, 41%, 95%, 0.5);
+$mPrimary: hsl(237, 43%, 40%);
+$dPrimary: hsl(237, 43%, 15%);
+$dPrimaryOpac: hsla(237, 43%, 15%, 0.3);
+
+$lSecondary: hsl(105, 13%, 95%);
+$mSecondary: hsl(105, 13%, 55%);
+$dSecondary: hsl(105, 13%, 18%);
 
 .container-fluid {
-    margin: 0;
     padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background-color: $lSecondary;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    text-decoration: none;
+    color: $dPrimaryOpac;
+    padding: 0;
+    margin: 0.5rem 1rem;
+}
+
+.navbar .navbar-nav .nav-item.active .nav-link {
+    color: $dPrimary;
+    border-bottom: 2px solid $dPrimary;
+    font-weight: 500;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 header {
@@ -28,11 +55,36 @@ header {
     width: auto;
     top: 50%;
     margin: 10%;
+    border: 1px solid $lPrimaryOpac;
 }
 
 #title {
-    color: rgb(156, 133, 68);
-    text-shadow: 1px 1px 1px whitesmoke;
+    color: $lPrimary;
+    text-shadow: 1px 1px 0 $lPrimaryOpac;
     margin: 10%;
     white-space: nowrap;
 }
+
+#title h5 {
+    text-align: right;
+}
+
+#main {
+    max-width: 80%;
+    background-color: $mPrimary;
+}
+
+#main p {
+    color: $lSecondary;
+    margin-bottom: 0;
+    padding: 1rem;
+}
+
+footer {
+    background-color: $mSecondary;
+}
+
+footer p {
+}
+
+// @include media-breakpoint-up(sm)
