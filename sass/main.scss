@@ -3,6 +3,7 @@ $lPrimaryOpac: hsla(237, 41%, 95%, 0.5);
 $mPrimary: hsl(237, 43%, 40%);
 $dPrimary: hsl(237, 43%, 15%);
 $dPrimaryOpac: hsla(237, 43%, 15%, 0.3);
+$dPrimaryOpac2: hsla(237, 43%, 15%, 0.7);
 
 $lSecondary: hsl(105, 13%, 95%);
 $mSecondary: hsl(105, 13%, 55%);
@@ -71,20 +72,64 @@ header {
 
 #main {
     max-width: 80%;
-    background-color: $mPrimary;
+    background-color: $lSecondary;
 }
 
-#main p {
-    color: $lSecondary;
-    margin-bottom: 0;
-    padding: 1rem;
+#main .mainContent {
+    margin: 2rem 1rem;
+    color: $dPrimaryOpac2;
+    box-shadow: 0 0 0 $dPrimaryOpac;
+    transition: box-shadow 0.5s, color 0.5s;
+}
+
+#main .mainContent:hover {
+    box-shadow: 0 0 5px $dPrimaryOpac;
+    color: $dPrimary;
+    transition: box-shadow 0.5s, color 0.5s;
+}
+
+#main .row .mainContent .techImage {
+    width: 10rem;
+    height: 10rem;
+    padding: 2rem;
+}
+
+#main .row .mainContent .mainText {
+    display: flex;
+    flex-direction: column;
+}
+
+#main h5, p {
+    // color: $dPrimary;
+    padding: 0.5rem 2rem;
+}
+
+#main .mainContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 footer {
-    background-color: $mSecondary;
+    background-color: $dPrimary;
 }
 
-footer p {
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-// @include media-breakpoint-up(sm)
+.socialMedia i {
+    padding: 1rem;
+}
+
+.fab {
+    color: $lPrimary;
+}
+
+@media (max-width: 576px) {
+    #main {
+        max-width: 100%;
+    }
+}

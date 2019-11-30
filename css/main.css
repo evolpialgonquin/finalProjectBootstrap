@@ -61,17 +61,65 @@ header {
 
 #main {
   max-width: 80%;
-  background-color: #3a3f92;
+  background-color: #f1f4f1;
 }
 
-#main p {
-  color: #f1f4f1;
-  margin-bottom: 0;
-  padding: 1rem;
+#main .mainContent {
+  margin: 2rem 1rem;
+  color: rgba(22, 23, 55, 0.7);
+  box-shadow: 0 0 0 rgba(22, 23, 55, 0.3);
+  transition: box-shadow 0.5s, color 0.5s;
+}
+
+#main .mainContent:hover {
+  box-shadow: 0 0 5px rgba(22, 23, 55, 0.3);
+  color: #161737;
+  transition: box-shadow 0.5s, color 0.5s;
+}
+
+#main .row .mainContent .techImage {
+  width: 10rem;
+  height: 10rem;
+  padding: 2rem;
+}
+
+#main .row .mainContent .mainText {
+  display: flex;
+  flex-direction: column;
+}
+
+#main h5, p {
+  padding: 0.5rem 2rem;
+}
+
+#main .mainContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 footer {
-  background-color: #859b7d;
+  background-color: #161737;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.socialMedia i {
+  padding: 1rem;
+}
+
+.fab {
+  color: #edeef7;
+}
+
+@media (max-width: 576px) {
+  #main {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
