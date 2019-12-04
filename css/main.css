@@ -83,6 +83,34 @@ header {
   text-align: right;
 }
 
+footer {
+  background-color: #161737;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+footer p {
+  color: rgba(237, 238, 247, 0.5);
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+footer .socialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .socialMedia i {
+  padding: 1rem 1rem 0 1rem;
+  color: #edeef7;
+}
+
 #main {
   max-width: 80%;
   background-color: #f1f4f1;
@@ -90,6 +118,10 @@ header {
 
 #main .row:first-child {
   padding-top: 5rem;
+}
+
+#main .row:last-child {
+  padding-bottom: 5rem;
 }
 
 #main .mainContent {
@@ -127,41 +159,13 @@ header {
   align-items: center;
 }
 
-footer {
-  background-color: #161737;
-}
-
-.footerContent {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-footer p {
-  color: rgba(237, 238, 247, 0.5);
-  font-size: 0.7rem;
-  margin: 0;
-  padding: 1rem;
-}
-
-footer .socialMedia {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-footer .socialMedia i {
-  padding: 1rem 1rem 0 1rem;
-}
-
-.fab {
-  color: #edeef7;
-}
-
 @media (max-width: 576px) {
   #main {
     max-width: 100%;
   }
+}
+#main .row .card.box {
+  margin: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

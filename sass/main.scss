@@ -9,6 +9,7 @@ $lSecondary: hsl(105, 13%, 95%);
 $mSecondary: hsl(105, 13%, 55%);
 $dSecondary: hsl(105, 13%, 18%);
 
+// Commom to every page:
 .container-fluid {
     padding: 0;
     margin: 0;
@@ -94,13 +95,46 @@ header {
     text-align: right;
 }
 
+footer {
+    background-color: $dPrimary;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer p {
+    color: $lPrimaryOpac;
+    font-size: 0.7rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+footer .socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer .socialMedia i {
+    padding: 1rem 1rem 0 1rem;
+    color: $lPrimary;
+}
+
 #main {
     max-width: 80%;
     background-color: $lSecondary;
 }
 
+// Homepage
 #main .row:first-child {
     padding-top: 5rem;
+}
+
+#main .row:last-child {
+    padding-bottom: 5rem;
 }
 
 #main .mainContent {
@@ -138,39 +172,13 @@ header {
     align-items: center;
 }
 
-footer {
-    background-color: $dPrimary;
-}
-
-.footerContent {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-footer p {
-    color: $lPrimaryOpac;
-    font-size: 0.7rem;
-    margin: 0;
-    padding: 1rem;
-}
-
-footer .socialMedia {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-footer .socialMedia i {
-    padding: 1rem 1rem 0 1rem;
-}
-
-.fab {
-    color: $lPrimary;
-}
-
 @media (max-width: 576px) {
     #main {
         max-width: 100%;
     }
+}
+
+// Portfolio
+#main .row .card.box {
+    margin: 1rem;
 }
