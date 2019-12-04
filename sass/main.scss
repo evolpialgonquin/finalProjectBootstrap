@@ -18,11 +18,30 @@ $dSecondary: hsl(105, 13%, 18%);
     background-color: $lSecondary;
 }
 
+.navbar .socialMedia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar .socialMedia i {
+    color: $dPrimary;
+    padding: 0 0.5rem;
+}
+
+.socialMedia i:hover {
+    transform: scale(1.1);
+}
+
 .navbar .navbar-nav .nav-item .nav-link {
     text-decoration: none;
     color: $dPrimaryOpac;
     padding: 0;
     margin: 0.5rem 1rem;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: $dPrimary;
 }
 
 .navbar .navbar-nav .nav-item.active .nav-link {
@@ -42,6 +61,7 @@ header {
     min-height: 40vh;
     position: relative;
     align-items: center;
+    box-shadow: -4px 4px 4px 4px $dPrimaryOpac;
 }
 
 #headerContent {
@@ -66,6 +86,10 @@ header {
     white-space: nowrap;
 }
 
+#title h1 {
+    font-size: 3rem;
+}
+
 #title h5 {
     text-align: right;
 }
@@ -75,8 +99,13 @@ header {
     background-color: $lSecondary;
 }
 
+#main .row:first-child {
+    padding-top: 5rem;
+}
+
 #main .mainContent {
-    margin: 2rem 1rem;
+    margin: 1rem 1rem;
+    padding: 1rem;
     color: $dPrimaryOpac2;
     box-shadow: 0 0 0 $dPrimaryOpac;
     transition: box-shadow 0.5s, color 0.5s;
@@ -100,7 +129,6 @@ header {
 }
 
 #main h5, p {
-    // color: $dPrimary;
     padding: 0.5rem 2rem;
 }
 
@@ -114,14 +142,27 @@ footer {
     background-color: $dPrimary;
 }
 
-.socialMedia {
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer p {
+    color: $lPrimaryOpac;
+    font-size: 0.7rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+footer .socialMedia {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.socialMedia i {
-    padding: 1rem;
+footer .socialMedia i {
+    padding: 1rem 1rem 0 1rem;
 }
 
 .fab {
