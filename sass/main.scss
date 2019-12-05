@@ -154,12 +154,21 @@ footer .socialMedia i {
 #main .row .mainContent .techImage {
     width: 10rem;
     height: 10rem;
-    padding: 2rem;
+    padding: 1rem;
 }
 
-#main .row .mainContent .mainText {
-    display: flex;
-    flex-direction: column;
+#main .row .mainContent .contentText p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    line-height: 1.9rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+#main .mainContent:hover .contentText p {
+    overflow: visible;
+    -webkit-line-clamp: unset;
 }
 
 #main h5, p {
