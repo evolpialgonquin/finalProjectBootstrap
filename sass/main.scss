@@ -9,6 +9,32 @@ $lSecondary: hsl(105, 13%, 95%);
 $mSecondary: hsl(105, 13%, 55%);
 $dSecondary: hsl(105, 13%, 18%);
 
+%mainColorTransition {
+    color: $dPrimaryOpac2;
+    box-shadow: 0 0 0 $dPrimaryOpac;
+    transition: box-shadow 0.5s, color 0.5s;
+}
+
+%mainColorTransitionHover {
+    box-shadow: 0 0 5px $dPrimaryOpac;
+    color: $dPrimary;
+    transition: box-shadow 0.5s, color 0.5s;
+}
+
+%pOverflowEllipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    line-height: 1.9rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+%pOverflowHover {
+    overflow: visible;
+    -webkit-line-clamp: unset;
+}
+
 // Commom to every page:
 .container-fluid {
     padding: 0;
@@ -140,35 +166,23 @@ footer .socialMedia i {
 #main .mainContent {
     margin: 1rem 1rem;
     padding: 1rem;
-    color: $dPrimaryOpac2;
-    box-shadow: 0 0 0 $dPrimaryOpac;
-    transition: box-shadow 0.5s, color 0.5s;
+    @extend %mainColorTransition;
+    .contentText p {
+        @extend %pOverflowEllipsis
+    }
 }
 
 #main .mainContent:hover {
-    box-shadow: 0 0 5px $dPrimaryOpac;
-    color: $dPrimary;
-    transition: box-shadow 0.5s, color 0.5s;
+    @extend %mainColorTransitionHover;
+    p {
+        @extend %pOverflowHover;
+    }
 }
 
 #main .row .mainContent .techImage {
     width: 10rem;
     height: 10rem;
     padding: 1rem;
-}
-
-#main .row .mainContent .contentText p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 4;
-    line-height: 1.9rem;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-}
-
-#main .mainContent:hover .contentText p {
-    overflow: visible;
-    -webkit-line-clamp: unset;
 }
 
 #main h5, p {
@@ -190,6 +204,34 @@ footer .socialMedia i {
 // Portfolio
 #main .row .card.box {
     margin: 1rem;
+    @extend %mainColorTransition;
+    i {
+        color: $dPrimaryOpac2;
+    }
+    .card-body {
+        text-align: center;
+        p {
+            @extend %pOverflowEllipsis;
+        }
+    }
+}
+
+#main .row .card.box:hover {
+    @extend %mainColorTransitionHover;
+    i {
+        color: $dPrimary;
+    }
+    p {
+        @extend %pOverflowHover;
+    }
+}
+
+#main .row .card.box .img-thumbnail:hover {
+    box-shadow: 0 0 2px 1px $dPrimaryOpac;
+}
+
+#main .row .card.box i:hover {
+    transform: scale(1.05);
 }
 
 // Contact for hiring
@@ -208,6 +250,10 @@ footer .socialMedia i {
 
 .form .rowInputs div {
     width: 49%;
+}
+
+.form .rowInputs label {
+    color: $dPrimaryOpac2
 }
 
 .form .textArea {
