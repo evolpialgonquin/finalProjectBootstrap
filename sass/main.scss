@@ -204,6 +204,7 @@ footer .socialMedia i {
 // Portfolio
 #main .row .card.box {
     margin: 1rem;
+    min-height: 80vh;
     @extend %mainColorTransition;
     i {
         color: $dPrimaryOpac2;
